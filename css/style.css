@@ -1,0 +1,518 @@
+/* Variables */
+:root {
+  /*  dark-palette  */
+  --dark-1: #293449;
+  --dark-2: #32425C;
+  --dark-3: #1D2739;
+  --dark-4: #161D29;
+  --dark-5: #405069;
+  --dark-6: #212A3A;
+  /*  neutral-palette */
+  --neutral-1: #F9F5F0;
+  --neutral-2: #F1F5F7;
+  --neutral-3: #F3F7F9;
+  --neutral-4: #C5C5C5;
+  --neutral-5: #A9A9A9;
+  --neutral-6: #EAEAEA;
+  /*  red-palette */
+  --red-1: #EE3643;
+  --red-2: #CA2C37;
+  --red-3: #BA2732;
+  /*  green-palette */
+  --green-1: #63A63E;
+  --green-2: #5FBB2D;
+  --green-3: #518534;
+  --green-4: #8ED78F;
+  --green-5: #367315;
+  /*  yellow-palette  */
+  --yellow-1: #FFBF47;
+  --yellow-2: #FFC047;
+  --yellow-3: #FFD180;
+  /*  others-palette */
+  --white: #FFFFFF;
+  --black: #000000;
+  --blue: #3BBCE3;
+  --pink: #DC91D8;
+  /* rgb-color  */
+  --black-rgb: 0, 0, 0;
+  --white-rgb: 255, 255, 255;
+  --neutral-4-rgb: 197, 197, 197;
+  --neutral-5-rgb: 169, 169, 169;
+}
+
+/* Global */
+body {
+  font-family: "PT Sans", "Nimbus Sans L", "Helvetica", "Arial", sans-serif;
+  font-size: 13px;
+  line-height: 24px;
+  color: var(--black);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0 none;
+  clip-path: inset(100%);
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.navigation {
+  font-family: "Cuprum", "Nimbus Sans L", "Helvetica", "Arial", sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  color: var(--white);
+}
+
+.list {
+  list-style: none;
+}
+
+.title {
+  font-family: "Cuprum", "Nimbus Sans L", "Helvetica", "Arial", sans-serif;
+  font-size: 30px;
+  line-height: 30px;
+  text-transform: uppercase;
+  color: var(--dark-2);
+}
+
+.button {
+  background-color: var(--red-1);
+  font-family: "Cuprum", "Nimbus Sans L", "Helvetica", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: var(--white);
+}
+
+/* status-button */
+.button:hover {
+  background-color: var(--red-2);
+}
+
+.button:active {
+  background-color: var(--red-3);
+}
+
+/* header */
+.main-header {
+  font-family: "Cuprum", "Nimbus Sans L", "Helvetica", "Arial", sans-serif;
+  background-color: var(--neutral-3);
+}
+
+.header-container {
+  background-color: var(--dark-1);
+  font-size: 18px;
+  line-height: 24px;
+  color: var(--white);
+}
+
+.logo {
+  background-color: var(--red-1);
+  box-shadow: inset 0px -5px 0px rgba(var(--black-rgb), 0.24);
+}
+
+/*  Search  */
+.search,
+.btn-search {
+  background-color: transparent;
+  border: none;
+}
+
+/*placeholder */
+.search::-webkit-input-placeholder {
+  color: var(--white);
+  font-family: "Cuprum", "Nimbus Sans L", "Helvetica", "Arial", sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.search::-moz-placeholder {
+  color: var(--white);
+  opacity: 1;
+  font-family: "Cuprum", "Nimbus Sans L", "Helvetica", "Arial", sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.search:-ms-input-placeholder {
+  color: var(--white);
+  font-family: "Cuprum", "Nimbus Sans L", "Helvetica", "Arial", sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+/*  search-focus */
+.search:focus {
+  background-color: var(--white);
+  border: none;
+  outline: none;
+}
+
+/*link-header */
+.link {
+  color: var(--white);
+}
+
+.link:active {
+  background-color: var(--dark-4);
+  color: rgba(var(--white-rgb), 0.5);
+}
+
+.order-link {
+  background-color: var(--green-1);
+}
+
+.order-link:hover {
+  background-color: var(--green-2);
+}
+
+.order-link:active {
+  background-color: var(--green-1);
+}
+
+/* UNDER-HEADER*/
+.info {
+  font-style: italic;
+  font-size: 16px;
+  line-height: 23px;
+  color: var(--red-1);
+}
+
+/*contacts-header */
+.contacts-header {
+  font-size: 14px;
+  line-height: 24px;
+  color: var(--dark-2);
+}
+
+.phone-contacts-header {
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 30px;
+  color: var(--red-1);
+  border: 3px solid var(--white);
+}
+
+/* login  */
+.login-link {
+  background-color: var(--white);
+  font-size: 21px;
+  line-height: 21px;
+  color: var(--black);
+}
+
+.login-link:hover {
+  color: var(--red-1);
+}
+
+.login-link:active {
+  color: var(--neutral-4);
+}
+
+/* menu-header  */
+.site-navigation {
+  background-color: var(--dark-2);
+  box-shadow: inset 0px -5px 0px var(--dark-1);
+}
+
+.site-navigation-item a {
+  color: var(--white);
+}
+
+.site-navigation-item a:hover {
+  background-color: var(--dark-1);
+}
+
+.site-navigation-item a:active {
+  background-color: var(--dark-3);
+  opacity: 0.5;
+}
+
+/*  Section "Menu"  */
+.menu-nav {
+  font-family: "Cuprum", "Nimbus Sans L", "Helvetica", "Arial", sans-serif;
+}
+
+.materials {
+  background-color: var(--yellow-1);
+}
+
+.tools {
+  background-color: var(--blue);
+}
+
+.technic {
+  background-color: var(--pink);
+}
+
+.sale {
+  background-color: var(--green-4);
+}
+
+.delivery {
+  background-color: var(--yellow-2);
+}
+
+.menu-nav-item h3 {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 30px;
+  color: var(--white);
+}
+
+.menu-btn {
+  background-color: rgba(var(--white-rgb), 0.3);
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: var(--white);
+}
+
+.menu-btn:hover {
+  background-color: rgba(var(--neutral-4-rgb), 0.3);
+}
+
+.menu-btn:active {
+  background-color: rgba(var(--neutral-5-rgb), 0.3);
+}
+
+/* slider */
+.slider {
+  background-color: var(--neutral-5);
+}
+
+.container-title {
+  background-color: rgba(var(--black-rgb), 0.25);
+}
+
+.slider h3 {
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 36px;
+  color: var(--white);
+}
+
+.slider p {
+  font-size: 18px;
+  line-height: 24px;
+  color: var(--white);
+}
+
+/* popular-section */
+.popular-container {
+  background-color: var(--neutral-1);
+}
+
+/* catalog */
+.products-item h3 {
+  font-family: "PT Sans", "Nimbus Sans L", "Helvetica", "Arial", sans-serif;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 20px;
+  color: var(--black);
+}
+
+.price {
+  font-family: "PT Sans", "Nimbus Sans L", "Helvetica", "Arial", sans-serif;
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 18px;
+}
+
+.old-price {
+  color: var(--neutral-5);
+}
+
+.new-price {
+  color: var(--white);
+  background-color: var(--red-1);
+}
+
+/*hover item catalog  */
+.products-item a:hover {
+  border: 1px solid var(--neutral-6);
+}
+
+/*  pop-up menu item  */
+.popup-menu {
+  font-family: "Cuprum", "Nimbus Sans L", "Helvetica", "Arial", sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  color: var(--white);
+}
+
+.popup-menu-cart {
+  background-color: var(--green-1);
+  box-shadow: inset 0px -3px 0px var(--green-5);
+  border-radius: 2px;
+  outline: none;
+}
+
+/* status-popup-menu-cart */
+.popup-menu-cart:hover {
+  background-color: var(--green-2);
+}
+
+.popup-menu-cart:active {
+  background-color: var(--green-3);
+}
+
+.popup-menu-bookmark {
+  background-color: transparent;
+  border: 3px solid var(--green-1);
+  color: var(--dark-2);
+  outline: none;
+}
+
+.popup-menu-bookmark:hover {
+  border-color: var(--dark-2);
+}
+
+.popup-menu-bookmark:active {
+  border-color: var(--dark-2);
+  opacity: 0.5;
+}
+
+/* brands card */
+.brands-item a:hover {
+  filter: drop-shadow(0px 4px 20px rgba(var(--black-rgb), 0.15));
+}
+
+.brands-item a:active {
+  background-color: rgba(var(--black-rgb), 0, 0001);
+  /*не получилось добиться эффекта как на макете*/
+}
+
+/*section service */
+.service {
+  background-color: var(--neutral-2);
+}
+
+.service h2,
+.about .title,
+.contacts .title {
+  color: var(--black);
+}
+
+.service-item a {
+  display: block;
+  background-color: var(--dark-2);
+  box-shadow: 0px 1px 0px var(--dark-1), inset 0px 1px 0px var(--dark-5);
+  font-family: "Cuprum", "Nimbus Sans L", "Helvetica", "Arial", sans-serif;
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 30px;
+  color: var(--white);
+}
+
+/* current  type of service */
+.current-service a {
+  background-color: var(--white);
+  box-shadow: 0px 1px 0px var(--white);
+  color: var(--dark-2);
+}
+
+.service-item a:hover {
+  background: var(--dark-1);
+  box-shadow: 0px 1px 0px var(--dark-1), inset 0px 1px 0px var(--dark-5);
+}
+
+.transport-item {
+  font-family: Cuprum;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+/* footer */
+/*  footer-background */
+.main-footer {
+  background-color: var(--dark-2);
+  font-family: "Cuprum", "Nimbus Sans L", "Helvetica", "Arial", sans-serif;
+}
+
+.footer-container {
+  background-color: var(--dark-1);
+  font-size: 16px;
+  line-height: 18px;
+  color: var(--white);
+}
+
+.footer-nav-item a {
+  color: var(--neutral-2);
+}
+
+.footer-menu-item a {
+  color: var(--yellow-3);
+}
+
+.footer-contacts {
+  font-size: 18px;
+  line-height: 24px;
+  color: var(--neutral-3)
+}
+
+.footer-contacts a {
+  font: inherit;
+  color: inherit;
+}
+
+.copy {
+  font-size: 16px;
+  line-height: 18px;
+  color: var(--white);
+}
+
+/*social-link*/
+.social-item a {
+  display: inline-block;
+  width: 44px;
+  height: 44px;
+  background-color: var(--dark-6);
+  border-radius: 50%;
+}
+
+.feedback a,
+.developer a {
+  font: inherit;
+  color: var(--yellow-3);
+}
+
+/* state footer-link */
+.footer-nav-item a:hover,
+.footer-menu-item a:hover {
+  text-decoration: underline;
+}
+
+.footer-nav-item a:active,
+.footer-menu-item a:active {
+  text-decoration: none;
+  opacity: 0.5;
+}
+
+.social-item a:hover,
+.social-item a:active {
+  background-color: var(--red-1);
+}
+
+.feedback a:hover,
+.developer a:hover {
+  text-decoration: underline;
+}
+
+.feedback a:active,
+.developer a:active {
+  text-decoration: none;
+  color: var(--red-1);
+}
