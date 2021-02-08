@@ -14,6 +14,9 @@
   --neutral-4: #C5C5C5;
   --neutral-5: #A9A9A9;
   --neutral-6: #EAEAEA;
+  --neutral-7: #F2F6F8;
+  --neutral-8: #F7F3EC;
+  --neutral-9: #E5E5E5;
   /*  red-palette */
   --red-1: #EE3643;
   --red-2: #CA2C37;
@@ -41,7 +44,7 @@
 }
 
 /* Global */
-body {
+.page-body {
   font-family: "PT Sans", "Nimbus Sans L", "Helvetica", "Arial", sans-serif;
   font-size: 13px;
   line-height: 24px;
@@ -85,6 +88,8 @@ img {
   line-height: 30px;
   text-transform: uppercase;
   color: var(--dark-2);
+  font-weight: normal;
+  /*прописала из-за браузерных стилей заголовков */
 }
 
 .button {
@@ -207,17 +212,20 @@ img {
 
 /* login  */
 .login-link {
+  display: block;
   background-color: var(--white);
   font-size: 21px;
   line-height: 21px;
   color: var(--black);
 }
 
-.login-link:hover {
+.user-link:hover {
   color: var(--red-1);
 }
 
-.login-link:active {
+.login-link:active,
+.user-name:active,
+.user-link:active {
   color: var(--neutral-4);
 }
 
@@ -340,9 +348,20 @@ img {
   background-color: var(--red-1);
 }
 
+
+.products-item a {
+  display: block;
+  width: 220px;
+  min-height: 318px;
+  background-color: var(--white);
+  border: 1px solid var(--neutral-6);
+}
+
 /*hover item catalog  */
 .products-item a:hover {
   border: 1px solid var(--neutral-6);
+  filter: drop-shadow(0px 4px 20px rgba(var(--black-rgb), 0.15));
+
 }
 
 /*  pop-up menu item  */
@@ -430,7 +449,7 @@ img {
 }
 
 .transport-item {
-  font-family: Cuprum;
+  font-family: "Cuprum", "Nimbus Sans L", "Helvetica", "Arial", sans-serif;
   font-size: 18px;
   line-height: 24px;
 }
@@ -515,4 +534,116 @@ img {
 .developer a:active {
   text-decoration: none;
   color: var(--red-1);
+}
+
+/*  catalog-page  */
+
+/*  login */
+.user-link {
+  font-size: 16px;
+  line-height: 18px;
+  color: var(--dark-2);
+
+}
+
+/*  h1  */
+.page-catalog .title {
+  background-color: var(--neutral-7);
+}
+
+.page-title,
+.show-button,
+.sort-choice {
+  font-size: 13px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: var(--black);
+  font-weight: normal;
+}
+
+/* filters  */
+
+.filter .page-title {
+  background-color: var(--neutral-8);
+}
+
+.filter-form fieldset {
+  border: none;
+  border-bottom: solid 1px rgba(var(--black-rgb), 0.1);
+}
+
+.filter-form legend {
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+
+.price-form input {
+  font-size: 17px;
+  line-height: 18px;
+}
+
+.price-form,
+.sort {
+  background-color: var(--neutral-8);
+}
+
+.filter-option {
+  font-size: 15px;
+  line-height: 19px;
+  text-transform: uppercase;
+}
+
+.filter-input-checkbox:hover+label,
+.filter-input-checkbox:focus+label {
+  outline: none;
+}
+
+/* blocked checkbox & radiobutton  */
+.filter-option .blocked {
+  opacity: 0.4;
+}
+
+.show-button {
+  background: var(--white);
+  border: 1px solid var(--neutral-9);
+}
+
+/*  sort  */
+
+.sort-choice {
+  opacity: 0.3;
+  text-decoration: underline;
+  text-decoration-color: var(--red-1);
+  text-decoration-style: dotted;
+}
+
+.sort-choice:hover {
+  opacity: 1;
+  text-decoration-style: solid;
+}
+
+.sort-choice.active {
+  color: var(--red-1);
+  opacity: 1;
+  text-decoration: none;
+}
+
+/* pagination */
+.pagination-item .show-button {
+  border-radius: 2px;
+}
+
+.pagination-item .show-button:active {
+  border-color: var(--red-1);
+}
+
+/* article-catalog-page */
+.perforator-info {
+  background-color: var(--neutral-2);
+}
+
+.perforator-info .title {
+  color: var(--black);
 }
