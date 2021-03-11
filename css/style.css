@@ -682,10 +682,6 @@ img {
   border: none;
 }
 
-.control-arrow:focus {
-  outline: none;
-}
-
 .prev {
   left: 24px;
 }
@@ -715,9 +711,6 @@ img {
   margin-right: 0;
 }
 
-.btn-slider:focus {
-  outline: none;
-}
 
 .next-radio {
   background-color: var(--white);
@@ -1125,7 +1118,7 @@ img {
   margin-top: 0;
   padding-left: 37px;
   margin-bottom: 20px;
-  }
+}
 
 /* transport-list decor */
 
@@ -1424,6 +1417,7 @@ img {
   font-size: 21px;
   line-height: 21px;
   color: var(--black);
+  position: relative;
 }
 
 .user-icon {
@@ -1431,8 +1425,10 @@ img {
   left: 15px;
 }
 
-.user-icon-out {
+.user-out {
   position: absolute;
+  width: 20px;
+  height: 17px;
   right: 15px;
   top: 15px;
 }
@@ -1738,6 +1734,11 @@ img {
   bottom: -3px;
   left: -32px;
   border: none;
+}
+
+.filter-input-checkbox:focus+label,
+.filter-input-radio:focus+label {
+  color: var(--red-1);
 }
 
 /*radio-button*/
@@ -2097,4 +2098,3 @@ img {
   background-color: var(--white);
   color: var(--black);
 }
-
