@@ -12,8 +12,8 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Cuprum:ital,wght@0,400;0,700;1,400&family=PT+Sans:wght@400;700&display=swap"
     rel="stylesheet">
-  <link href="css/normalize.css" rel="stylesheet">
-  <link href="css/style.css" rel="stylesheet">
+  <link href="css/normalize.min.css" rel="stylesheet">
+  <link href="css/style.min.css" rel="stylesheet">
 </head>
 
 <body class="page-body">
@@ -36,9 +36,9 @@
           </button>
         </form>
         <a class="link bookmark-link" href="#" aria-label="Посмотреть товары, добавленные в закладки">Закладки:
-          <span>0</span></a>
+          <span class="bookmark-counter">0</span></a>
         <a class="link cart-link" href="#" aria-label="Посмотреть товары, добавленные в корзину">Корзина:
-          <span>0</span></a>
+          <span class="cart-counter">0</span></a>
         <a class="link order-link" href="#">Оформить заказ</a>
       </div>
     </div>
@@ -48,7 +48,8 @@
         и инструментов для ремонта
       </p>
       <div class="contacts-header">
-        <a class="phone-contacts-header" href="tel:+78125550555" aria-label="Позвонить по телефону магазина Техномарт +78125550555">+7
+        <a class="phone-contacts-header" href="tel:+78125550555"
+          aria-label="Позвонить по телефону магазина Техномарт +78125550555">+7
           (812) 555-05-55</a>
         <p>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
         </p>
@@ -69,7 +70,7 @@
         <ul class="navigation list site-navigation ">
           <li class="site-navigation-item"><a>Главная</a></li>
           <li class="site-navigation-item"><a href="#">Компания</a></li>
-          <li class="site-navigation-item"><a href="#">Каталог</a></li>
+          <li class="site-navigation-item"><a href="catalog.html">Каталог</a></li>
           <li class="site-navigation-item"><a href="#">Новости</a></li>
           <li class="site-navigation-item"><a href="#">Спецпредложения</a></li>
           <li class="site-navigation-item"><a href="#">Доставка</a></li>
@@ -277,12 +278,12 @@
         </p>
         <div class="container-columns">
           <ul class="list service-list">
-            <li class="service-item current-service"><a href="#delivery">Доставка</a></li>
-            <li class="service-item"><a href="#guarantee">Гарантия</a></li>
-            <li class="service-item"><a href="#credit">Кредит</a></li>
+            <li class="service-item current-service">Доставка</li>
+            <li class="service-item">Гарантия</li>
+            <li class="service-item">Кредит</li>
           </ul>
           <ul class="list desk-service-list">
-            <li class="desk-service-item  delivery-service" id="delivery">
+            <li class="desk-service-item delivery-service">
               <h3 class="title">Доставка</h3>
               <p>
                 Мы с удовольствием доставим ваш товар прямо <br />
@@ -291,7 +292,7 @@
                 поднимая его на ваш этаж!
               </p>
             </li>
-            <li class="desk-service-item  guarantee-service hidden" id="guarantee">
+            <li class="desk-service-item  guarantee-service hidden">
               <h3 class="title">Гарантия</h3>
               <p>
                 Если купленный у нас товар поломается или заискрит,<br />
@@ -301,7 +302,7 @@
                 Дом уж восстановите как-нибудь сами.
               </p>
             </li>
-            <li class="desk-service-item  credit-service hidden  " id="credit">
+            <li class="desk-service-item  credit-service hidden">
               <h3 class="title">Кредит</h3>
               <p>
                 Залезть в долговую яму стало проще!<br />Кредитные консультанты
@@ -338,9 +339,10 @@
         <h2 class="title">КОНТАКТЫ</h2>
         <div class="text-about">
           <p>Вы можете забрать товар сами,<br> заехав в наш офис:</p>
-          <img src="img/maps/map-small.png" width="300" height="158" alt="Магазин Техномарт на карте." />
+          <img src="img/maps/map-small.png" class="map-show" width="300" height="158"
+            alt="Магазин Техномарт на карте." />
         </div>
-        <button class="button" type="button">Заблудились? Напишите НАМ!</button>
+        <button class="button feedback-button" type="button">Заблудились? Напишите НАМ!</button>
       </section>
     </div>
   </main>
@@ -352,7 +354,8 @@
         </a>
         <p class="footer-contacts">
           г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8<br />
-          <a href="tel:+78125550555" aria-label="Позвонить по телефону магазина Техномарт +78125550555">+7 (812) 555-05-55</a>
+          <a href="tel:+78125550555" aria-label="Позвонить по телефону магазина Техномарт +78125550555">+7 (812)
+            555-05-55</a>
         </p>
       </div>
       <div class="top-footer-columns">
@@ -424,15 +427,15 @@
         <div class="input-form">
           <div class="input-form-column">
             <label for="name">Ваше имя:</label>
-            <input type="text" name="name" id="name" placeholder="Имя Фамилия">
+            <input type="text" name="name" id="name" class="feedback-name" placeholder="Имя Фамилия">
           </div>
           <div class="input-form-column">
             <label for="email">Ваш e-mail:</label>
-            <input type="email" name="email" id="email" placeholder="email@example.com">
+            <input type="email" name="email" id="email" class="feedback-email" placeholder="email@example.com">
           </div>
         </div>
         <label for="messege">Текст письма:</label>
-        <textarea id="messege" name="messege" placeholder="В свободной форме"></textarea>
+        <textarea id="messege" name="messege" class="feedback-text" placeholder="В свободной форме"></textarea>
       </div>
       <div class="modal-footer-container">
         <button type="submit" class="button submit-button">Отправить</button>
@@ -446,8 +449,22 @@
       src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5989424124007!2d30.320894616173568!3d59.93879686904788!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1614246037134!5m2!1sru!2sru"
       width="943" height="449" style="border:0;" allowfullscreen="" loading="lazy"
       title="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург"></iframe>
-    <button type="button" class="close-button" aria-label="Закрыть"></button>
+    <button type="button" class="close-button close-map" aria-label="Закрыть"></button>
   </section>
+  <section class="modal  modal-add-cart hidden">
+    <h2>Товар добавлен в корзину!</h2>
+    <div class="modal-footer-container">
+      <a class="button" href="">ОФОРМИТЬ ЗАКАЗ</a>
+      <a class="button continue" href="">ПРОДОЛЖИТЬ ПОКУПКИ</a>
+    </div>
+    <button type="button" class="close-button close-add-cart" aria-label="Закрыть"></button>
+  </section>
+  <script src="js/feedback.js"></script>
+  <script src="js/map.js"></script>
+  <script src="js/addcart.js"></script>
+  <script src="js/slider.js"></script>
+  <script src="js/tabs-slider.js"></script>
+  <script src="js/addbookmark.js"></script>
 </body>
 
 </html>
